@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("Running");
 });
 
-app.post("/3ds/:encodedUrl", (req, res) => {
+app.get("/3ds/:encodedUrl", (req, res) => {
   try {
     const encodedUrl = req.params.encodedUrl;
     const htmlContent = Buffer.from(
