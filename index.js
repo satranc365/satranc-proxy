@@ -12,7 +12,7 @@ var corsOptions = {
     });
   },
 };
-
+app.options("*", cors()); // include before other routes
 app.use(cors(corsOptions));
 app.get("/", (req, res) => {
   res.send("Running");
