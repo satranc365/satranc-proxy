@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.send("Running");
 });
 
-app.get("/3ds/:encodedUrl", (req, res) => {
+app.post("/3ds/:encodedUrl", (req, res) => {
   const encodedUrl = req.params.encodedUrl;
   const htmlContent = atob(decodeURI(encodedUrl));
   res.send(htmlContent);
